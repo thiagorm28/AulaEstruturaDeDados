@@ -1,9 +1,7 @@
 package Aula1;
 
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class UsandoListas {
 
@@ -44,11 +42,66 @@ public class UsandoListas {
         for(int i = 0; i < frutas.size(); i++){
             System.out.println(frutas.get(i));
         }
+
+        ordemalfabeticadascores();
     }
 
+    public static void Imprimir (List<String> titulo, String texto){
+        System.out.println(texto + titulo);
+    }
 
-    public static void Imprimir(List<String> titulo, String s) {
-        System.out.println(s);
+    //Método que retorne os nomes das cores que você mais gosta
+
+    public static List<String> cores() {
+        List<String> coresfavs = new ArrayList<>();
+        coresfavs.addAll(Arrays.asList("Azul", "Preto", "Branco", "Cinza"));
+        return coresfavs;
+    }
+
+    ////Método que dado uma lista retorne a quantidade de itens
+
+    public static Integer quantitensnalista(List<String> titulo){
+        return titulo.size();
+    }
+
+    //Método que receba 3 Strings, adicione todos em uma lista e remova a segunda posição
+
+    public static void listade3strings(String text1, String text2, String text3){
+        List<String> listastrings = new ArrayList<>();
+        listastrings.addAll(Arrays.asList(text1, text2, text3));
+        listastrings.remove(1);
+        System.out.println(listastrings);
+    }
+
+    //Método que imprima a lista de cores do primeiro método
+
+    public static void imprimelistadecores(List<String> titulo){
+        List<String> coresfavs = cores();
+        System.out.println("Minhas cores favoritas são: " + coresfavs);
+    }
+
+    //Método que imprima as cores do primeiro método em ordem alfabética
+
+    public static void ordemalfabeticadascores(){
+        List<String>  titulo = cores();
+        Collections.sort(titulo);
         System.out.println(titulo);
+    }
+
+    //Método que receba uma lista das cores que você mais gosta e o nome de uma cor a ser removida
+
+    public static void removeumacor(String corremover){
+        List<String> listacores = cores();
+        listacores.remove(corremover);
+    }
+
+    ////Método que receba a lista de cores que você gosta e imprima em ordem decrescente (alfabética)
+
+    public static void ordemdecrescente(){
+        List<String> listacores = cores();
+        Collections.sort(listacores);
+        for(int x = 0; x < listacores.size(); x++){
+            listacores.forEach; == listacores.get(x) + listacores.size())
+        }
     }
 }
