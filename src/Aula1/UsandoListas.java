@@ -42,8 +42,6 @@ public class UsandoListas {
         for(int i = 0; i < frutas.size(); i++){
             System.out.println(frutas.get(i));
         }
-
-        ordemalfabeticadascores();
     }
 
     public static void Imprimir (List<String> titulo, String texto){
@@ -60,13 +58,13 @@ public class UsandoListas {
 
     ////Método que dado uma lista retorne a quantidade de itens
 
-    public static Integer quantitensnalista(List<String> titulo){
+    public static Integer quantItensNaLista(List<String> titulo){
         return titulo.size();
     }
 
     //Método que receba 3 Strings, adicione todos em uma lista e remova a segunda posição
 
-    public static void listade3strings(String text1, String text2, String text3){
+    public static void listaDe3Strings(String text1, String text2, String text3){
         List<String> listastrings = new ArrayList<>();
         listastrings.addAll(Arrays.asList(text1, text2, text3));
         listastrings.remove(1);
@@ -75,14 +73,14 @@ public class UsandoListas {
 
     //Método que imprima a lista de cores do primeiro método
 
-    public static void imprimelistadecores(List<String> titulo){
+    public static void imprimeListaDeCores(List<String> titulo){
         List<String> coresfavs = cores();
         System.out.println("Minhas cores favoritas são: " + coresfavs);
     }
 
     //Método que imprima as cores do primeiro método em ordem alfabética
 
-    public static void ordemalfabeticadascores(){
+    public static void ordemAlfabeticaDasCores(){
         List<String>  titulo = cores();
         Collections.sort(titulo);
         System.out.println(titulo);
@@ -90,14 +88,14 @@ public class UsandoListas {
 
     //Método que receba uma lista das cores que você mais gosta e o nome de uma cor a ser removida
 
-    public static void removeumacor(String corremover){
+    public static void removeUmaCor(String corremover){
         List<String> listacores = cores();
         listacores.remove(corremover);
     }
 
     ////Método que receba a lista de cores que você gosta e imprima em ordem decrescente (alfabética)
 
-    public static void ordemdecrescente() {
+    public static void ordemDecrescente() {
         List<String> listacores = cores();
         Collections.sort(listacores);
         Collections.reverse(listacores);
@@ -106,7 +104,7 @@ public class UsandoListas {
 
     //Método que receba uma lista de números e retorne um mapa com listas de números pares e ímpares
 
-    public static void mapnumerospares(){
+    public static void mapNumerosPares(){
         List<Integer> numeros = new ArrayList<>();
         List<Integer> pares = new ArrayList<>();
         List<Integer> impares = new ArrayList<>();
