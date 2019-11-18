@@ -97,11 +97,35 @@ public class UsandoListas {
 
     ////Método que receba a lista de cores que você gosta e imprima em ordem decrescente (alfabética)
 
-    public static void ordemdecrescente(){
+    public static void ordemdecrescente() {
         List<String> listacores = cores();
         Collections.sort(listacores);
-        for(int x = 0; x < listacores.size(); x++){
-            listacores.forEach; == listacores.get(x) + listacores.size())
+        Collections.reverse(listacores);
+        System.out.println(listacores);
+    }
+
+    //Método que receba uma lista de números e retorne um mapa com listas de números pares e ímpares
+
+    public static void mapnumerospares(){
+        List<Integer> numeros = new ArrayList<>();
+        List<Integer> pares = new ArrayList<>();
+        List<Integer> impares = new ArrayList<>();
+        for(int x = 0; x <= 20; x++){
+            numeros.add(x);
+        }
+        Map<String, List<Integer>> pareimpar = new HashMap<>();
+        for(int x = 0; x <= 20; x++){
+            if(numeros.get(x) % 2 == 0){
+                pares.add(numeros.get(x));
+            }
+            else{
+                impares.add(numeros.get(x));
+            }
+        }
+        pareimpar.put("Pares", pares);
+        pareimpar.put("Ímpares", impares);
+        for(Map.Entry<String, List<Integer>> entry : pareimpar.entrySet()){
+            System.out.println(entry.getKey()+entry.getValue());
         }
     }
 }
